@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'order.apps.OrderConfig',
+    'imagekit',
     'stripe',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -125,9 +127,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 
 LOGIN_URL ='/account/login/'
 
 # settings.py
 STRIPE_SECRET_KEY = 'sk_test_T9tH2CsvS9UHGvyEteoJw0kp00CtRP8fFW'
 STRIPE_PUBLISHABLE_KEY = 'pk_test_1LejKB6SXY7Mppd9rVWdYhmX00n4DvV0GQ'
+
+
+

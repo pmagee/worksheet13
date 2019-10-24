@@ -52,7 +52,8 @@ def cart_detail(request, total=0, counter=0, cart_items = None):
 	stripe_total = int(total * 100)
 	description = 'Online Shop - New Order'
 	data_key = settings.STRIPE_PUBLISHABLE_KEY
-	return render(request, 'cart.html', dict(cart_items = cart_items, total = total, counter = counter,data_key = data_key, stripe_total = stripe_total, description = description))
+	return render(request, 'cart.html', dict(cart_items = cart_items, total = total, 
+				counter = counter,data_key = data_key, stripe_total = stripe_total, description = description))
 
 def cart_remove(request, product_id):
 	cart = Cart.objects.get(cart_id=_cart_id(request))

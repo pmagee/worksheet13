@@ -47,7 +47,7 @@
 			</div>  
         </div>
         <p>
-            <a href=""><button class="btn btn-primary">Cancel Order</button></a>
+            <a href="{% url 'cancel_order' order.id %}"><button class="btn btn-primary">Cancel Order</button></a>
         </p>
 	{% endfor %}
 </div>
